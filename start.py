@@ -2,6 +2,7 @@ from tkinter import Tk, messagebox, PhotoImage, Label, StringVar, Entry
 
 app = Tk()
 
+#Window Shape
 app.geometry("600x700+450+80")
 app.resizable(False,False)
 app.title("Voicer")
