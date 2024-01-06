@@ -16,7 +16,25 @@ def Record():
     freq = 44100
     dur = int(duration.get())
     recording = sound.rec(dur*freq, samplerate = freq, channels = 2)
+    
+    #Timer
+    try:
+        temp = int(duration.get())
+    except:
+        raise Exception("You need to put in a value!!")
+    
+    while temp > 0:
+        app.update()
+        time.sleep(1)
+        temp -= 1
 
+        if temp == 0:
+            messagebox.showinfo("Time Countdown","Your time is up!")
+        
+        Label(text=f"{str(temp)}",font="arial 20",width=4,background="#4a4a4a").place(x=240,y=590)
+
+    sound.wait()
+    write("recording.wav",freq,recording)
 
 
 #icon
