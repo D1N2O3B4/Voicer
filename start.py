@@ -2,6 +2,7 @@ from tkinter import Tk, messagebox, PhotoImage, Label, StringVar, Entry, Button
 from scipy.io.wavfile import write
 import wavio as wv
 import sounddevice as sound
+import time
 
 app = Tk()
 
@@ -13,6 +14,9 @@ app.configure(background="#4a4a4a")
 
 def Record():
     freq = 44100
+    dur = int(duration.get())
+    recording = sound.rec(dur*freq, samplerate = freq, channels = 2)
+
 
 
 #icon
