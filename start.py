@@ -1,4 +1,7 @@
 from tkinter import Tk, messagebox, PhotoImage, Label, StringVar, Entry, Button
+from scipy.io.wavfile import write
+import wavio as wv
+import sounddevice as sound
 
 app = Tk()
 
@@ -10,7 +13,7 @@ app.configure(background="#4a4a4a")
 
 def Record():
     freq = 44100
-    
+
 
 #icon
 img_icon = PhotoImage(file="./assets/record.png")
