@@ -12,6 +12,7 @@ app.resizable(False,False)
 app.title("Voicer")
 app.configure(background="#4a4a4a")
 
+#Record Function
 def Record():
     freq = 44100
     dur = int(duration.get())
